@@ -29,6 +29,13 @@ With this repo you can Automatically:
 # Requirements 
 Make sure that you have atleast python3 installed on your machine 
 
+# Usage 
+
+Just clone this repository on your machine and the use the command 
+```
+python DockerManagementTUI.py 
+```
+
 # User Interface 
 ![User Interface](Images/User%20Interface.png)
 
