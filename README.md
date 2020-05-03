@@ -47,6 +47,11 @@ Make sure that you have atleast python3 installed on your machine
 # Docker Monitor
 ![Docker Monitor](Images/Dockly%20Monitor.png)
 
+ ## MySQL client
+If you want to verify that your database folder has been created or not, install MySQL client software using yum install mysql. After installation run this command : 
+   
+    mysql -h 172.17.0.0/16 (your MySQL container IP) -u (username) -p
+
 # Troublshooting the erros
 Linux firewall won't allow to connect to MySQL database server and to outside world. Hence following commands should be implemented first in order to connect to server.
 ```
