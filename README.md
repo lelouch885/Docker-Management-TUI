@@ -72,6 +72,9 @@ Linux firewall won't allow to connect to MySQL database server and to outside wo
 - systemctl restart docker
 - Change your network settings to Bridge Adapter
 ```
+# Authors
+- [Aishwary Madiwale](https://github.com/lelouch885)
+- [Deepak Singh](https://github.com/deepaksingh4)
 
 # About
 This is a docker project built for need of automation and maintaining the server database in cases when local system crashes, Docker is too fast in building OS i.e. in few seconds this will help owncloud to maintain file storage safe.
