@@ -33,7 +33,7 @@ Make sure that you have atleast python3 installed on your machine
 
 Just clone this repository on your machine and the use the command 
 ```
-python DockerManagementTUI.py 
+python3 DockerManagementTUI.py 
 ```
 
 # User Interface 
