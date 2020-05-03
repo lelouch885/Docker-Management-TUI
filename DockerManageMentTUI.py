@@ -24,8 +24,17 @@ def dockerinstall():
     os.system("systemctl enable docker")
 
 def dockdelt():
-    os.system("yum remove docker-ce")
-    os.system("rm -rf /var/lib/docker")
+	os.system("tput setaf 1")
+	print(" Warning!!!!!! this action will remove docker from you system  and all the data assciated with it ")
+	os.system("tput setaf 7")
+	print("Are you sure you want to proceed with this yes or no ")
+	ans=input()
+	if ans == 'yes' or ans == 'y' or ans == 'Y':
+		os.system("yum remove docker-ce")
+		os.system("rm -rf /var/lib/docker")
+	elif ans == 'no' or ans == 'n'or ans == 'N':
+		print("Action Aborted")
+		
 
 def deletedockimage():
 	print("Do you want to delete all the docker images  yes or no")
@@ -149,37 +158,37 @@ while True:
 	intro()
 	print("\tMenu")
 	print("\t1.  Install Docker")
-	print("\t2.  Download Docker Images")
-	print("\t3.  Set up a Wordpress server")
-	print("\t4.  Pull up Docker monitor")
-	print("\t5.  Delete docker images")
-	print("\t6.  Start a docker container")
-	print("\t7.  Check Docker Version")
-	print("\t8.  Check all Docker Images")
-	print("\t9.  Uninstall  Docker ? ")
-	print("\t10. Start Emby Media Server")
+	print("\t2.  Check Docker Version")
+	print("\t3.  Check all Docker Images")
+	print("\t4.  Download Docker Images")
+	print("\t5.  Start a docker container")
+	print("\t6.  Set up a Wordpress server")
+	print("\t7.  Start Emby Media Server")
+	print("\t8.  Pull up Docker monitor")
+	print("\t9.  Delete docker images")	
+	print("\t10.  Uninstall  Docker ? ")
 	print("\t11. Exit")
 	m = int(input())
 	if m == 1:
 		dockerinstall()
 	elif m == 2:
-		image()
-	elif m == 3:
-		wordpress()
-	elif m == 4:
-		dockmonitor()
-	elif m == 5:
-		deletedockimage()
-	elif m == 6:
-		dockcontstart()
-	elif m == 7:
 		dockver()
-	elif m == 8:
+	elif m == 3:
 		dockimg()
-	elif m == 9:
-		dockdelt()
-	elif m == 10:
+	elif m == 4:
+		image()
+	elif m == 5:
+		dockcontstart()
+	elif m == 6:
+		wordpress()
+	elif m == 7:
 		embyserver()
+	elif m == 8:
+		dockmonitor()
+	elif m == 9:
+		deletedockimage()
+	elif m == 10:
+		dockdelt()
 	elif m == 11:
 		exit()
 	else :
